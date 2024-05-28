@@ -42,6 +42,11 @@ jobs:
           AWS_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
           SOURCE_DIR: "build"
 
+      - name: Print AWS Info
+        run: |
+          echo "AWS_S3_BUCKET=${{ secrets.AWS_STAGING_BUCKET_NAME }}"
+          echo "AWS_REGION=${{ secrets.AWS_DEFAULT_REGION }}"
+
       - name: Verify Secrets
         run: |
           echo "Checking if secrets are accessible..."

@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Community from "./pages/Community";
 import Travel from "./pages/Travel";
 import Mypage from "./pages/Mypage";
+import PlaceDetail from "./assets/PlaceDetail";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path ="/travel" element = {<Travel/>}/>
         <Route path ="/calendar" element = {<Calendar/>}/>
         <Route path ="/community" element = {<Community/>}/>
+        <Route path = "/main/:name" element = {<PlaceDetail/>}/>
         <Route path ="/mypage" element = {<Mypage/>}/>
       </Routes>
       <Footer/>

@@ -1,0 +1,29 @@
+
+
+.main-page-wrapper{
+    width:100%;
+    margin-bottom: 60px;
+}
+
+
+
+
+
+
+.attraction-wrapper{
+    margin:10px;
+}
+
+.attraction-img-wrapper {
+    display:flex;
+    min-width: 100%;
+    overflow-x:scroll;
+}
+
+.attraction-img-wrapper::-webkit-scrollbar{
+    display: none; 
+}
+
+.attraction-img-wrapper img{
+    margin-right: 10px;
+}

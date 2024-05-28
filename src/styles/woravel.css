@@ -1,0 +1,32 @@
+
+
+
+/* place-detail css */
+.place-detail-header{
+    display: flex;
+    justify-content: space-between;
+}
+.place-detail-header .FontAwesomeIcon {
+    margin-top:10px;
+}
+
+.place-detail-header h2{
+    font-family: "Jost", sans-serif;
+}
+
+.place-img-wrapper{
+    display:flex;
+    min-width: 100%;
+    overflow-x:scroll;
+}
+
+.name-saved-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.detail-icon-wrapper{
+    border : 1px solid #000;
+}

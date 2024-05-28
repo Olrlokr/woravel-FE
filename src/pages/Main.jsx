@@ -15,7 +15,7 @@ function Attraction({ place }) {
       <div className="address" style={{fontWeight:"light", fontSize:"13px"}}>{place.address}</div>
       <div className="attraction-img-wrapper">
         {place.img_src.map((src, index) => (
-          <img key={index} src={src} style={{ width: "100%", height: "236px" }} alt={`Image ${index}`}/>
+          <img key={index} src={src} style={{ width: "100%", height: "236px" }} alt={`${index}`}/>
         ))}
       </div>
     </div>

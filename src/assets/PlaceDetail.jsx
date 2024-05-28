@@ -16,7 +16,7 @@ export default function PlaceDetail() {
       </div>
       <div className = "place-img-wrapper">
       {state.img_src.map((src, index) => (
-          <img key={index} src={src} style={{ width: "413px", height: "197px" }} alt={`Image ${index}`}/>
+          <img key={index} src={src} style={{ width: "413px", height: "197px" }} alt={`${index}`}/>
         ))}
       </div>
 

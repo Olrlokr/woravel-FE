@@ -7,12 +7,14 @@ import Community from "./pages/Community";
 import Travel from "./pages/Travel";
 import Mypage from "./pages/Mypage";
 import PlaceDetail from "./assets/PlaceDetail";
+import Header from "./components/Header";
 
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <Header/>
       <Routes>
         <Route path = "/" element ={<Main/>} />
         <Route path ="/*" element = {<NotFound/>}/>

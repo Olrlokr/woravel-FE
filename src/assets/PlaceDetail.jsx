@@ -1,22 +1,25 @@
-import React from 'react'
-import '../styles/woravel.css'
+import React, { useState } from 'react'
+import '../styles/main.css'
 import { useLocation } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
+
 export default function PlaceDetail() {
   const {state} = useLocation();
+  const [savePlace,setSavePlace] = useState(0);
+
+  const toggleSavePlace = () => {
+    setSavePlace(prevSavePlace => (prevSavePlace === 0 ? 1 : 0));
+  };
+
 
 
   return (
     <div className='place-detail-wrapper'>
-      <div className ="place-detail-header"> 
-        <h2 >Woravel  -- </h2>
-        <FontAwesomeIcon icon ="magnifying-glass" size="2x" style={{verticalAlign:"center", margin:"17px 15px"}}/>
-      </div>
       <div className = "place-img-wrapper">
       {state.img_src.map((src, index) => (
-          <img key={index} src={src} style={{ width: "413px", height: "197px" }} alt={`${index}`}/>
+          <img key={index} src={src} style={{ width: "100%", height: "197px" }} alt={`${index}`}/>
         ))}
       </div>
 
@@ -24,9 +27,22 @@ export default function PlaceDetail() {
         <div className ="name-saved-wrapper">
           <div className = "place-name-wrapper" style={{ marginTop: "20px",fontSize:"20px", fontWeight:"bold"}}>{state.name}</div>
           <div clasName = "place-saved-wrpper" style={{display:"flex"}}> 
-            <div className = "detail-icon-wrapper"><FontAwesomeIcon icon = "message"/></div>
-            <div className = "detail-icon-wrapper"><FontAwesomeIcon icon="share-nodes"/></div>
-            <div className = "detail-icon-wrapper"><FontAwesomeIcon icon ="bookmark"/></div>
+            <div className = "detail-icon-wrapper">
+            <FontAwesomeIcon icon="fa-regular fa-message" 
+              size = "2x"/>
+              
+              </div>
+            <div className = "detail-icon-wrapper">
+              <FontAwesomeIcon icon="share-nodes"
+              size = "2x"/>
+              </div>
+            <div className = "detail-icon-wrapper" onClick={toggleSavePlace}>
+              {savePlace === 0 ? (
+                <FontAwesomeIcon icon={['far', 'bookmark']} size="2x" />
+              ) : (
+                <FontAwesomeIcon icon={['fas', 'bookmark']} size="2x" />
+              )}
+              </div>
           </div>  
         </div>
         <div> {state.address} </div>

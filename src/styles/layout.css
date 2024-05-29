@@ -1,5 +1,6 @@
+/* header, footer layout css */
 
-
+/* Header */
 .footer-wrap{
     background-color: #fff;
     position: fixed;
@@ -23,6 +24,34 @@
     line-height: 45px;
 }
 
+.main-link{
+    color:#1f1f1f;
+    text-decoration: none;
+
+}
+
 .active {
     color: #FF9559;
-  }
+}
+
+
+/* Header */
+.header-wrap{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+}
+
+.logo-wrapper{
+    font-size: 30px;
+}
+
+.search-icon-wrapper{
+    padding-top: 5px;
+}
+
+.logo-icon-wrapper{
+    padding: 0px 5px;
+    color: #FF9559;
+}
+

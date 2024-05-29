@@ -1,12 +1,30 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import '../styles/footer.css'
+import '../styles/layout.css'
 import "../assets/FontAwesome";
+import { useLocation } from 'react-router-dom';
 
 export default function Footer() {
 
+    const location = useLocation();
+
+
+
     const [activeNav, setActiveNav] = useState(1);
+
+    useEffect (()=> {
+        console.log("this is location:", location);
+
+        if (location.pathname === '/travel') setActiveNav(2);
+        else if (location.pathname ==='/community') setActiveNav(3);
+        else if (location.pathname ==="/calendar") setActiveNav(4);
+        else if (location.pathname ==="/mypage") setActiveNav(5);
+        else setActiveNav(1);
+    },[location])
+
+
+    
   return (
     <div className ='footer-wrap'>
         <Link to="/" className="nav-link" onClick={() => setActiveNav(1)}> 

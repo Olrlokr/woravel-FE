@@ -20,7 +20,7 @@ export default function Header() {
       <div className = "search-icon-wrapper" >
         <FontAwesomeIcon
         icon ="magnifying-glass"
-        size='lg'
+        size='xl'
         className=""/>
       </div>
     </div>

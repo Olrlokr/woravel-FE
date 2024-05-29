@@ -14,8 +14,6 @@ export default function Footer() {
     const [activeNav, setActiveNav] = useState(1);
 
     useEffect (()=> {
-        console.log("this is location:", location);
-
         if (location.pathname === '/travel') setActiveNav(2);
         else if (location.pathname ==='/community') setActiveNav(3);
         else if (location.pathname ==="/calendar") setActiveNav(4);

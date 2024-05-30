@@ -54,7 +54,7 @@
 }
 .detail-icon-wrapper svg{
     padding:5px 6.5px;
-    border: 1.5px solid #000;
+    border: 1.3px solid #000;
     border-radius: 1000px;
     width : 20px;
 
@@ -63,7 +63,6 @@
 .place-info-wrapper{
     padding:10px 3px;
 }
-
 
 
 .narrative-info-wrapper{

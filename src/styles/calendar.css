@@ -1,6 +1,8 @@
 @import '../styles/woravel.css';
 
-
+.calendar-page-wrapper{
+    margin-bottom:50px;
+}
 
 /* this is full calendar custom */
 
@@ -8,9 +10,10 @@
 :root {
     --fc-border-color: #fff;
     --fc-event-bg-color: #FF9559;
-    --fc-event-border-color: #FF9559; 
+    --fc-event-border-color: #fff; 
     --fc-now-indicator-color:#FF9559;
-    --fc-button-active-border-color: aqua;
+    --fc-button-active-border-color: #FF9559;
+    --fc-button-active-bg-color : #fff;
   }
 
 
@@ -68,11 +71,6 @@
 
 
 
-
-
-
-
-
 /* !!  */
 .plan-wrapper{
     padding: 15px;
@@ -103,3 +101,18 @@
     border-radius: 100px;
 }
 
+
+/* 계획된 일정 !!  */
+.date-plan-wrapper{
+    padding: 15px;
+    font-size: 16px;
+    font-family: Inter;
+}
+/* travel - work 계획 색상 변경 */
+
+.work-event-item{
+    padding: 15px;
+    font-size: 16px;
+    font-family: Inter;
+
+}

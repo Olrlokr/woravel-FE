@@ -1,26 +1,26 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
 import '../styles/main.css'
+import Attraction from '../components/Attraction';
 
 
-function Attraction({ place }) {
-  const navigate = useNavigate();
-  const onClickPlaceItem=()=>{
-    navigate(`/main/${place.name}`, { state: place });
-  }
+// function Attraction({ place }) {
+//   const navigate = useNavigate();
+//   const onClickPlaceItem=()=>{
+//     navigate(`/main/${place.name}`, { state: place });
+//   }
 
-  return (
-    <div className='attraction-wrapper' onClick={onClickPlaceItem}>
-      <div style={{fontWeight:"bold", fontSize:"20px", padding:"10px 0px 5px 0px"}}>{place.name}</div>
-      <div className="address" style={{fontWeight:"light", fontSize:"13px"}}>{place.address}</div>
-      <div className="attraction-img-wrapper">
-        {place.img_src.map((src, index) => (
-          <img key={index} src={src} style={{ maxWidth: "100%", height: "236px" }} alt={`${index}`}/>
-        ))}
-      </div>
-    </div>
-  )
-}
+//   return (
+//     <div className='attraction-wrapper' onClick={onClickPlaceItem}>
+//       <div style={{fontWeight:"bold", fontSize:"20px", padding:"10px 0px 5px 0px"}}>{place.name}</div>
+//       <div className="address" style={{fontWeight:"light", fontSize:"13px"}}>{place.address}</div>
+//       <div className="attraction-img-wrapper">
+//         {place.img_src.map((src, index) => (
+//           <img key={index} src={src} style={{ maxWidth: "100%", height: "236px" }} alt={`${index}`}/>
+//         ))}
+//       </div>
+//     </div>
+//   )
+// }
 
 const attractionPlace = [
   {
@@ -44,8 +44,6 @@ const attractionPlace = [
 export default function Main() {
   return (
     <div className = "main-page-wrapper">
-
-
       <div className="main-attraction-wrapper">
         {attractionPlace.map((place, index) => (
           <Attraction key={index} place={place}/>

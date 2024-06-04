@@ -26,7 +26,7 @@ export default function PlaceDetail() {
       <div className ="place-info-wrapper">
         <div className ="name-saved-wrapper">
           <div className = "place-name-wrapper" style={{ marginTop: "20px",fontSize:"25px", fontWeight:"bold", padding: "10px 0px"}}>{state.name}</div>
-          <div clasName = "place-saved-wrpper" style={{display:"flex"}}> 
+          <div className = "place-saved-wrpper" style={{display:"flex"}}> 
             <div className = "detail-icon-wrapper">
             <FontAwesomeIcon icon="fa-regular fa-message" 
               size = "xl"/>

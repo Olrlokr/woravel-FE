@@ -9,8 +9,6 @@ export default function Footer() {
 
     const location = useLocation();
 
-
-
     const [activeNav, setActiveNav] = useState(1);
 
     useEffect (()=> {

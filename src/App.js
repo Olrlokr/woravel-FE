@@ -8,6 +8,7 @@ import Travel from "./pages/Travel";
 import Mypage from "./pages/Mypage";
 import PlaceDetail from "./assets/PlaceDetail";
 import Header from "./components/Header";
+import Login from "./components/Login";
 
 
 function App() {
@@ -18,10 +19,12 @@ function App() {
       <Routes>
         <Route path = "/" element ={<Main/>} />
         <Route path ="/*" element = {<NotFound/>}/>
+        <Route path ="/login" element = {<Login/>}/>
         <Route path ="/travel" element = {<Travel/>}/>
         <Route path ="/calendar" element = {<Calendar/>}/>
         <Route path ="/community" element = {<Community/>}/>
         <Route path = "/main/:name" element = {<PlaceDetail/>}/>
+        <Route path = "/travel/:name" element = {<PlaceDetail/>}/>
         <Route path ="/mypage" element = {<Mypage/>}/>
       </Routes>
       <Footer/>

@@ -7,9 +7,13 @@ import '../styles/calendar.css'
 
 const events = [
   {
-    title : "일",
+    title : "일~?",
     start : "2024-05-30",
-    end : "2024-05-31",
+    type: "work"
+  },
+  {
+    title : "일12~23?",
+    start : "2024-05-31",
     type: "work"
   },
   {
@@ -68,17 +72,16 @@ export default function Calendar() {
    
 
   const eventContent = (info) => {
-    console.log('test하고 지우기 | info : ',info)
-    // 이벤트 유형에 따라 다른 클래스 추가
+    // 이벤트 유형(work,travel)에 따른 이벤트 색상 변화 
     let title = info.event.title;
     if(info.event.title.length > 4){
       title = info.event.title.substring(0, 4) + "..";
     }
-    if (info.event._def.extendedProps.type === "work") {
+    if (info.event._def.extendedProps.type === "travel") {
       return { 
         html: `<div class="fc-content fc-event-work" style = "background-color:#B2DEFC;border: 1px solid #B2DEFC;color:#000 ">${title}</div>` 
       };
-    } else if (info.event._def.extendedProps.type === "travel") {
+    } else if (info.event._def.extendedProps.type === "work") {
       return { 
         html: `<div class="fc-content fc-event-travel style = "background-color:#FF9559;border: 1px solid #FF9559">${title}</div>` 
       };

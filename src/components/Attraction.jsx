@@ -10,7 +10,7 @@ export default function Attraction({ place }) {
         if (location.pathname === '/travel') {
             navigate(`/travel/${place.name}`, { state: place });
         }else if(location.pathname === '/'){
-            navigate(`/main/${place.name}`, { state: place });
+            navigate(`/main/${place.name}`, { state: place }); 
         }
     }
   
